@@ -1,29 +1,6 @@
-#README
+#ZERP Pedidos
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Projeto que exemplifica implementação de um sistema de emissão de pedidos simplificado usando PostgreSQL, conforme o modelo de domínio que segue:
 
-![Figure 1-1](https://raw.github.com/theorenck/zerp_pedidos/master/docs/domain.png "Domain Model")
+![Figure 1-1](https://raw.github.com/theorenck/zerp_pedidos/master/docs/domain.png "Modelo de Domínio")
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
