@@ -3,6 +3,8 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
+![Figure 1-1](https://raw.github.com/theorenck/zerp_pedidos/master/docs/domain.png "Domain Model")
+
 Things you may want to cover:
 
 * Ruby version
