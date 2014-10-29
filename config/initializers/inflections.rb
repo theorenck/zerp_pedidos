@@ -14,4 +14,5 @@
  ActiveSupport::Inflector.inflections(:en) do |inflect|
 #   inflect.acronym 'RESTful'
    inflect.irregular 'fornecedor', 'fornecedores'
+   inflect.irregular 'vendedor', 'vendedores'
  end
