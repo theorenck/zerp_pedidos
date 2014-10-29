@@ -15,4 +15,5 @@
 #   inflect.acronym 'RESTful'
    inflect.irregular 'fornecedor', 'fornecedores'
    inflect.irregular 'vendedor', 'vendedores'
+   inflect.irregular 'unidade_medida', 'unidades_medida'
  end
