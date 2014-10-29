@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codigo: MyString
+  codigo_barras: MyString
+  descricao: MyString
+  preco_custo: 9.99
+  preco_venda: 9.99
+  situacao: MyString
+  observacoes: MyString
+  references: 
+  references: 
+
+two:
+  codigo: MyString
+  codigo_barras: MyString
+  descricao: MyString
+  preco_custo: 9.99
+  preco_venda: 9.99
+  situacao: MyString
+  observacoes: MyString
+  references: 
+  references: 
