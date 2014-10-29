@@ -16,4 +16,5 @@
    inflect.irregular 'fornecedor', 'fornecedores'
    inflect.irregular 'vendedor', 'vendedores'
    inflect.irregular 'unidade_medida', 'unidades_medida'
+   inflect.irregular 'tipo_produto', 'tipos_produto'
  end
