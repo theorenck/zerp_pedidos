@@ -8,8 +8,8 @@ class CreateProdutos < ActiveRecord::Migration
       t.decimal :preco_venda
       t.string :situacao
       t.string :observacoes
-      t.tipo_produto :references
-      t.marca :references
+      t.references :tipo_produto
+      t.references :marca
 
       t.timestamps
     end
