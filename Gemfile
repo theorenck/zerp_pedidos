@@ -53,3 +53,5 @@ gem "rails_12factor", group: :production
 
 # Use new relic extension for performance monitoring
 gem "newrelic_rpm"
+
+gem "rails-erd", group: :development
