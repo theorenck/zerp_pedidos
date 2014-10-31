@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141031122538) do
+ActiveRecord::Schema.define(version: 20141031170935) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,6 +64,19 @@ ActiveRecord::Schema.define(version: 20141031122538) do
     t.datetime "updated_at"
   end
 
+  create_table "itens_pedido", force: true do |t|
+    t.integer  "pedido_id"
+    t.integer  "produto_id"
+    t.decimal  "quantidade"
+    t.decimal  "percentual_desconto"
+    t.decimal  "valor_decimal"
+    t.decimal  "valor_unitario"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "itens_pedido", ["pedido_id"], name: "index_itens_pedido_on_pedido_id", using: :btree
+
   create_table "marcas", force: true do |t|
     t.integer  "fabriacnte_id"
     t.string   "descricao"
@@ -83,16 +96,9 @@ ActiveRecord::Schema.define(version: 20141031122538) do
 
   add_index "modelos", ["marca_id"], name: "index_modelos_on_marca_id", using: :btree
 
-  create_table "pedido_items", force: true do |t|
-    t.decimal  "quantidade"
-    t.decimal  "percentual_desconto"
-    t.decimal  "valor_desconto"
-    t.decimal  "valor_unitario"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "pedidos", force: true do |t|
+    t.integer  "cliente_id"
+    t.integer  "vendedor_id"
     t.integer  "numero"
     t.datetime "emissao"
     t.datetime "entrega"
@@ -130,7 +136,7 @@ ActiveRecord::Schema.define(version: 20141031122538) do
     t.string   "situacao"
     t.string   "observacoes"
     t.integer  "tipo_produto_id"
-    t.integer  "marca_id"
+    t.integer  "modelo_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -142,7 +148,7 @@ ActiveRecord::Schema.define(version: 20141031122538) do
   end
 
   create_table "unidades_medida", force: true do |t|
-    t.string   "abreviatura"
+    t.string   "simbolo"
     t.string   "descricao"
     t.datetime "created_at"
     t.datetime "updated_at"

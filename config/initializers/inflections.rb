@@ -18,4 +18,5 @@
    inflect.irregular 'unidade_medida', 'unidades_medida'
    inflect.irregular 'tipo_produto', 'tipos_produto'
    inflect.irregular 'pedido', 'pedidos'
+   inflect.irregular 'item_pedido', 'itens_pedido'
  end
