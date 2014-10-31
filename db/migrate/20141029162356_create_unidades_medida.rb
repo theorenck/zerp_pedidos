@@ -1,7 +1,7 @@
 class CreateUnidadesMedida < ActiveRecord::Migration
   def change
     create_table :unidades_medida do |t|
-      t.string :abreviatura
+      t.string :simbolo
       t.string :descricao
 
       t.timestamps
