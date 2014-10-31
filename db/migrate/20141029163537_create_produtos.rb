@@ -9,7 +9,7 @@ class CreateProdutos < ActiveRecord::Migration
       t.string :situacao
       t.string :observacoes
       t.references :tipo_produto
-      t.references :marca
+      t.references :modelo
 
       t.timestamps
     end
