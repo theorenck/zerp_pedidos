@@ -2,7 +2,7 @@ class CreateItensPedido < ActiveRecord::Migration
   def change
     create_table :itens_pedido do |t|
       t.references :pedido, index: true
-      t.references :produto
+      t.references :produto, index: true
       t.decimal :quantidade
       t.decimal :percentual_desconto
       t.decimal :valor_decimal
