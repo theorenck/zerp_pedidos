@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141029163537) do
+ActiveRecord::Schema.define(version: 20141031122538) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "clientes", force: true do |t|
+    t.string   "situacao"
+    t.string   "observacoes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "contatos", force: true do |t|
     t.string   "descricao"
@@ -75,6 +82,25 @@ ActiveRecord::Schema.define(version: 20141029163537) do
   end
 
   add_index "modelos", ["marca_id"], name: "index_modelos_on_marca_id", using: :btree
+
+  create_table "pedido_items", force: true do |t|
+    t.decimal  "quantidade"
+    t.decimal  "percentual_desconto"
+    t.decimal  "valor_desconto"
+    t.decimal  "valor_unitario"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pedidos", force: true do |t|
+    t.integer  "numero"
+    t.datetime "emissao"
+    t.datetime "entrega"
+    t.string   "situacao"
+    t.string   "observacoes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "pessoas", force: true do |t|
     t.string   "type"
