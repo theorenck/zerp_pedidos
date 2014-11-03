@@ -4,6 +4,8 @@ class CreateFornecedores < ActiveRecord::Migration
       t.string :situacao
       t.string :observacoes
 
+      t.references :pessoa
+
       t.timestamps
     end
   end

@@ -1,5 +1,5 @@
 class Pedido < ActiveRecord::Base
-	belongs_to :cliente
-	belongs_to :vendedor
-	has_many :pedido_item
+	has_one :cliente
+	has_one :vendedor
+	has_many :itens_pedido
 end

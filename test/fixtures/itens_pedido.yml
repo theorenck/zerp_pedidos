@@ -3,11 +3,11 @@
 one:
   quantidade: 9.99
   percentual_desconto: 9.99
-  valor_desconto: 9.99
+  valor_decimal: 9.99
   valor_unitario: 9.99
 
 two:
   quantidade: 9.99
   percentual_desconto: 9.99
-  valor_desconto: 9.99
+  valor_decimal: 9.99
   valor_unitario: 9.99
