@@ -1,0 +1,54 @@
+<%- model_class = Produto -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:codigo) %></th>
+      <th><%= model_class.human_attribute_name(:codigo_barras) %></th>
+      <th><%= model_class.human_attribute_name(:descricao) %></th>
+      <th><%= model_class.human_attribute_name(:preco_custo) %></th>
+      <th><%= model_class.human_attribute_name(:preco_venda) %></th>
+      <th><%= model_class.human_attribute_name(:situacao) %></th>
+      <th><%= model_class.human_attribute_name(:observacoes) %></th>
+      <th><%= model_class.human_attribute_name(:tipo_produto_id) %></th>
+      <th><%= model_class.human_attribute_name(:marca_id) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @produtos.each do |produto| %>
+      <tr>
+        <td><%= produto.id %></td>
+          <td><%= produto.codigo %></td>
+          <td><%= produto.codigo_barras %></td>
+          <td><%= produto.descricao %></td>
+          <td><%= produto.preco_custo %></td>
+          <td><%= produto.preco_venda %></td>
+          <td><%= produto.situacao %></td>
+          <td><%= produto.observacoes %></td>
+          <td><%= produto.tipo_produto_id %></td>
+          <td><%= produto.marca_id %></td>
+        <td><%=l produto.created_at, format: :long %></td>
+        <td>
+          <%= link_to produto_path(produto), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
+            <%= glyph 'info-sign' %>
+          <%- end -%>
+          <%= link_to edit_produto_path(produto), :class => 'btn btn-xs', :title => "#{ t('.edit', :default => t('helpers.links.edit')) }" do %>
+            <%= glyph 'pencil' %>
+          <%- end -%>
+          <%= link_to produto_path(produto), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs', :title => "#{ t('.destroy', :default => t('helpers.links.destroy')) }" do %>
+            <%= glyph 'remove' %>
+          <%- end -%>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_produto_path,
+            :class => 'btn btn-primary' %>
