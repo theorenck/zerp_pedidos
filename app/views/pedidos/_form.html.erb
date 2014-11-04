@@ -1,0 +1,52 @@
+<%= form_for @pedido, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="form-group">
+    <%= f.label :cliente_id, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :cliente_id, :class => 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :vendedor_id, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :vendedor_id, :class => 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :numero, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :numero, :class => 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :emissao, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :emissao, :class => 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :entrega, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :entrega, :class => 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :situacao, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :situacao, :class => 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :observacoes, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :observacoes, :class => 'text_field form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  pedidos_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+<% end %>
