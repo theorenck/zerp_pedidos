@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   resources :contatos
 
+  resources :fornecedores
+
   resources :pedidos
 
   resources :itens_pedido
