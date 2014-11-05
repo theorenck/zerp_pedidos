@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :marcas
+
   resources :produtos
 
   resources :contatos

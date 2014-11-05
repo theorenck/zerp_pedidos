@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 20141031170935) do
   create_table "fornecedores", force: true do |t|
     t.string   "situacao"
     t.string   "observacoes"
+    t.integer  "pessoa_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -76,15 +77,16 @@ ActiveRecord::Schema.define(version: 20141031170935) do
   end
 
   add_index "itens_pedido", ["pedido_id"], name: "index_itens_pedido_on_pedido_id", using: :btree
+  add_index "itens_pedido", ["produto_id"], name: "index_itens_pedido_on_produto_id", using: :btree
 
   create_table "marcas", force: true do |t|
-    t.integer  "fabriacnte_id"
+    t.integer  "fabricante_id"
     t.string   "descricao"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "marcas", ["fabriacnte_id"], name: "index_marcas_on_fabriacnte_id", using: :btree
+  add_index "marcas", ["fabricante_id"], name: "index_marcas_on_fabricante_id", using: :btree
 
   create_table "modelos", force: true do |t|
     t.string   "codigo"
