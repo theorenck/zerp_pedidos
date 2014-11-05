@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :fabricantes
+
   resources :unidades_medida
 
   resources :marcas
