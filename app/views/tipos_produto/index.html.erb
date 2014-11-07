@@ -1,6 +1,6 @@
 <%- model_class = TipoProduto -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+<div class="page-header">    
+  <h1><%=t '.title', :default => model_class.table_name.humanize.titleize %></h1>
 </div>
 <table class="table table-striped">
   <thead>

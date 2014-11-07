@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :modelos
+
   resources :tipos_produto
 
   resources :fabricantes
