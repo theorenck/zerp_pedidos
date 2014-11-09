@@ -1,0 +1,64 @@
+<%- model_class = Pessoa -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:type) %></th>
+      <th><%= model_class.human_attribute_name(:cpf_cnpj) %></th>
+      <th><%= model_class.human_attribute_name(:razao_social) %></th>
+      <th><%= model_class.human_attribute_name(:nome_fantasia) %></th>
+      <th><%= model_class.human_attribute_name(:inscricao_estadual) %></th>
+      <th><%= model_class.human_attribute_name(:inscricao_municipal) %></th>
+      <th><%= model_class.human_attribute_name(:suframa) %></th>
+      <th><%= model_class.human_attribute_name(:nome) %></th>
+      <th><%= model_class.human_attribute_name(:data_nascimento) %></th>
+      <th><%= model_class.human_attribute_name(:naturalidade) %></th>
+      <th><%= model_class.human_attribute_name(:rg_emissao) %></th>
+      <th><%= model_class.human_attribute_name(:rg_numero) %></th>
+      <th><%= model_class.human_attribute_name(:orgao) %></th>
+      <th><%= model_class.human_attribute_name(:sexo) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @pessoas.each do |pessoa| %>
+      <tr>
+        <td><%= pessoa.id %></td>
+          <td><%= pessoa.type %></td>
+          <td><%= pessoa.cpf_cnpj %></td>
+          <td><%= pessoa.razao_social %></td>
+          <td><%= pessoa.nome_fantasia %></td>
+          <td><%= pessoa.inscricao_estadual %></td>
+          <td><%= pessoa.inscricao_municipal %></td>
+          <td><%= pessoa.suframa %></td>
+          <td><%= pessoa.nome %></td>
+          <td><%= pessoa.data_nascimento %></td>
+          <td><%= pessoa.naturalidade %></td>
+          <td><%= pessoa.rg_emissao %></td>
+          <td><%= pessoa.rg_numero %></td>
+          <td><%= pessoa.orgao %></td>
+          <td><%= pessoa.sexo %></td>
+        <td><%=l pessoa.created_at, format: :long %></td>
+        <td>
+          <%= link_to pessoa_path(pessoa), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
+            <%= glyph 'info-sign' %>
+          <%- end -%>
+          <%= link_to edit_pessoa_path(pessoa), :class => 'btn btn-xs', :title => "#{ t('.edit', :default => t('helpers.links.edit')) }" do %>
+            <%= glyph 'pencil' %>
+          <%- end -%>
+          <%= link_to pessoa_path(pessoa), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs', :title => "#{ t('.destroy', :default => t('helpers.links.destroy')) }" do %>
+            <%= glyph 'remove' %>
+          <%- end -%>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_pessoa_path,
+            :class => 'btn btn-primary' %>

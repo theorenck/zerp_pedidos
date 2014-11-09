@@ -1,8 +1,8 @@
-<%= form_for @fornecedor, :html => { :class => 'form-horizontal' } do |f| %>
-  <%= render @fornecedor.pessoa %> 
+<%= form_for @cliente, :html => { :class => 'form-horizontal' } do |f| %>
 
-  <div class="form-group">   
+  <%= render @cliente.pessoa %> 
 
+  <div class="form-group">
     <%= f.label :situacao, :class => 'control-label col-md-2' %>
     <div class="col-md-10">
       <%= f.text_field :situacao, :class => 'text_field form-control' %>
@@ -25,7 +25,7 @@
     <div class='col-md-offset-2 col-md-10'>
       <%= f.submit nil, :class => 'btn btn-primary' %>
       <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                  fornecedores_path, :class => 'btn btn-default' %>
+                  clientes_path, :class => 'btn btn-default' %>
     </div>
   </div>
 <% end %>

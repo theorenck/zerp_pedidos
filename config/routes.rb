@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :clientes
+
+  resources :pessoas
+
   resources :modelos
 
   resources :tipos_produto

@@ -19,4 +19,6 @@
    inflect.irregular 'tipo_produto', 'tipos_produto'
    inflect.irregular 'item_pedido', 'itens_pedido'
    inflect.irregular 'situacao', 'situacoes'
+   inflect.irregular 'pessoa_fisica', 'pessoas_fisicas'
+   inflect.irregular 'pessoa_juridica', 'pessoas_juridicas'
  end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141031170935) do
+ActiveRecord::Schema.define(version: 20141109190153) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,7 +21,10 @@ ActiveRecord::Schema.define(version: 20141031170935) do
     t.string   "observacoes"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "pessoa_id"
   end
+
+  add_index "clientes", ["pessoa_id"], name: "index_clientes_on_pessoa_id", using: :btree
 
   create_table "contatos", force: true do |t|
     t.string   "descricao"
@@ -80,13 +83,13 @@ ActiveRecord::Schema.define(version: 20141031170935) do
   add_index "itens_pedido", ["produto_id"], name: "index_itens_pedido_on_produto_id", using: :btree
 
   create_table "marcas", force: true do |t|
-    t.integer  "fabricante_id"
+    t.integer  "fabriacnte_id"
     t.string   "descricao"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "marcas", ["fabricante_id"], name: "index_marcas_on_fabricante_id", using: :btree
+  add_index "marcas", ["fabriacnte_id"], name: "index_marcas_on_fabriacnte_id", using: :btree
 
   create_table "modelos", force: true do |t|
     t.string   "codigo"
