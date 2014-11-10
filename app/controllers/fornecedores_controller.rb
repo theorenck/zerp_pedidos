@@ -76,7 +76,6 @@ class FornecedoresController < ApplicationController
         :pessoa_id,
         pessoa_attributes:[
           :type, 
-
           :razao_social, 
           :nome_fantasia,
           :cpf_cnpj, 

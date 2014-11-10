@@ -19,6 +19,7 @@ class FabricantesController < ApplicationController
 
   # GET /fabricantes/1/edit
   def edit
+    
   end
 
   # POST /fabricantes

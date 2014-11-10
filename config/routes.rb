@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :vendedores
+
   resources :clientes
 
   resources :pessoas
