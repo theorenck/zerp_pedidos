@@ -14,7 +14,7 @@
       <th><%= model_class.human_attribute_name(:situacao) %></th>
       <th><%= model_class.human_attribute_name(:observacoes) %></th>
       <th><%= model_class.human_attribute_name(:tipo_produto_id) %></th>
-      <th><%= model_class.human_attribute_name(:marca_id) %></th>
+      
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -31,7 +31,7 @@
           <td><%= produto.situacao %></td>
           <td><%= produto.observacoes %></td>
           <td><%= produto.tipo_produto_id %></td>
-          <td><%= produto.marca_id %></td>
+          
         <td><%=l produto.created_at, format: :long %></td>
         <td>
           <%= link_to produto_path(produto), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
