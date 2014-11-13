@@ -1,0 +1,70 @@
+<%= form_for @endereco, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="form-group">
+    <%= f.label :bairro, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :bairro, :class => 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :cep, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :cep, :class => 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :cidade, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :cidade, :class => 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :codigo_ibge, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :codigo_ibge, :class => 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :complemento, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :complemento, :class => 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :logradouro, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :logradouro, :class => 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :numero, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :numero, :class => 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :pais, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :pais, :class => 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :uf, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :uf, :class => 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :pessoa_id, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :pessoa_id, :class => 'text_field form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  enderecos_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+<% end %>
