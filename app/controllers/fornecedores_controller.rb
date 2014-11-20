@@ -1,5 +1,5 @@
 class FornecedoresController < ApplicationController
-  before_action :set_fornecedor, only: [:show, :edit, :update, :destroy]
+  before_action :set_fornecedor, only: [:show, :new, :edit, :update, :destroy]
 
   # GET /fornecedores
   # GET /fornecedores.json
@@ -14,7 +14,7 @@ class FornecedoresController < ApplicationController
 
   # GET /fornecedores/new
   def new
-    @fornecedor = Fornecedor.new(pessoa: PessoaJuridica.new)
+    #@fornecedor = Fornecedor.new(pessoa: PessoaJuridica.new)
   end
 
   # GET /fornecedores/1/edit
@@ -64,7 +64,12 @@ class FornecedoresController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_fornecedor
-      @fornecedor = Fornecedor.find(params[:id])
+      #@fornecedor = Fornecedor.find(params[:id])
+      if params[:id]
+        @fornecedor = Fornecedor.includes(:pessoa).find(params[:id]) 
+      else
+        @fornecedor = Fornecedor.new(pessoa: PessoaJuridica.new)
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
@@ -75,13 +80,22 @@ class FornecedoresController < ApplicationController
         :observacoes, 
         :pessoa_id,
         pessoa_attributes:[
+          :id,
           :type, 
           :razao_social, 
           :nome_fantasia,
           :cpf_cnpj, 
           :inscricao_estadual,
           :inscricao_municipal,
-          :suframa
+          :suframa,
+
+          :nome,
+          :data_nascimento,
+          :naturalidade,
+          :rg_emissao,
+          :rg_numero,
+          :orgao,
+          :sexo   
         ]
       )
     end

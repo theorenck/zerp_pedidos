@@ -69,19 +69,28 @@ class ClientesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cliente_params
-      params[:fcliente][:pessoa_attributes] = params[:pessoa_attributes]
+      params[:cliente][:pessoa_attributes] = params[:pessoa_attributes]
       params.require(:cliente).permit(
         :observacoes, 
         :situacao,
+        :pessoa_id,
         pessoa_attributes:[
+          :id,
           :type, 
-          :nome, 
-          :data_nascimento, 
-          :naturalidade, 
-          :rg_emissao, 
-          :rg_numero, 
-          :orgao, 
-          :sexo
+          :razao_social, 
+          :nome_fantasia,
+          :cpf_cnpj, 
+          :inscricao_estadual,
+          :inscricao_municipal,
+          :suframa,
+
+          :nome,
+          :data_nascimento,
+          :naturalidade,
+          :rg_emissao,
+          :rg_numero,
+          :orgao,
+          :sexo 
         ]
         )
     end

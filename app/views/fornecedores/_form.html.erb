@@ -3,6 +3,8 @@
   <%= render @fornecedor.pessoa %> 
   
   <div class="form-group">   
+    <%= f.hidden_field :id %>
+    <%= f.hidden_field :pessoa_id %>
     <%= f.label :situacao, :class => 'control-label col-md-2' %>
     <div class="col-md-10">
       <%= f.text_field :situacao, :class => 'text_field form-control' %>
@@ -14,13 +16,6 @@
       <%= f.text_field :observacoes, :class => 'text_field form-control' %>
     </div>
   </div>
-  <div class="form-group">
-    <%= f.label :pessoa_id, :class => 'control-label col-md-2' %>
-    <div class="col-md-10">
-      <%= f.text_field :pessoa_id, :class => 'text_field form-control' %>
-    </div>
-  </div>
-
   <div class="form-group">
     <div class='col-md-offset-2 col-md-10'>
       <%= f.submit nil, :class => 'btn btn-primary' %>

@@ -1,4 +1,11 @@
-<%= fields_for :pessoa_attributes, pessoa_juridica do |f| %>  
+<%= fields_for :pessoa_attributes, pessoa_juridica do |f| %> 
+
+  <div class="form-group">
+    <%= f.label :type, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.select(:type, options_for_select({ "Pessoa Física" => "PessoaFisica", "Pessoa Jurídica" => "PessoaJuridica" }), {}, {class: "form-control"}) %>
+    </div>
+  </div>
   <div class="form-group">
     <%= f.label :cpf_cnpj, :class => 'control-label col-md-2' %>
     <div class="col-md-10">
