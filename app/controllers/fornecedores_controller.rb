@@ -14,7 +14,7 @@ class FornecedoresController < ApplicationController
 
   # GET /fornecedores/new
   def new
-    #@fornecedor = Fornecedor.new(pessoa: PessoaJuridica.new)
+    @fornecedor = Fornecedor.new(pessoa: PessoaFisica.new)
   end
 
   # GET /fornecedores/1/edit
@@ -41,6 +41,7 @@ class FornecedoresController < ApplicationController
   # PATCH/PUT /fornecedores/1.json
   def update
     respond_to do |format|
+      p fornecedor_params
       if @fornecedor.update(fornecedor_params)
         format.html { redirect_to @fornecedor, notice: 'Fornecedor was successfully updated.' }
         format.json { render :show, status: :ok, location: @fornecedor }
