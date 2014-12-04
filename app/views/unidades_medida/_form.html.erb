@@ -1,15 +1,10 @@
 <%= form_for @unidade_medida, :html => { :class => 'form-horizontal' } do |f| %>
-  <div class="form-group">
-    <%= f.label :simbolo, :class => 'control-label col-md-2' %>
-    <div class="col-md-10">
-      <%= f.text_field :simbolo, :class => 'text_field form-control' %>
-    </div>
+  <div class="col-md-10">
+    <%= f.text_field :simbolo, :class => 'text_field form-control' %>
   </div>
-  <div class="form-group">
-    <%= f.label :descricao, :class => 'control-label col-md-2' %>
-    <div class="col-md-10">
-      <%= f.text_field :descricao, :class => 'text_field form-control' %>
-    </div>
+
+  <div class="col-md-10">
+    <%= f.text_field :descricao, :class => 'text_field form-control' %>
   </div>
 
   <div class="form-group">

@@ -2,17 +2,12 @@
 
   <%= render @vendedor.pessoa %> 
   
-  <div class="form-group">
-    <%= f.label :percentual_comissao, :class => 'control-label col-md-2' %>
-    <div class="col-md-10">
-      <%= f.text_field :percentual_comissao, :class => 'text_field form-control' %>
-    </div>
+  <div class="col-md-10">
+    <%= f.text_field :percentual_comissao, :class => 'text_field form-control' %>
   </div>
-  <div class="form-group">
-    <%= f.label :situacao, :class => 'control-label col-md-2' %>
-    <div class="col-md-10">
-      <%= f.text_field :situacao, :class => 'text_field form-control' %>
-    </div>
+
+  <div class="col-md-10">
+    <%= f.text_field :situacao, :class => 'text_field form-control' %>
   </div>
 
   <div class="form-group">

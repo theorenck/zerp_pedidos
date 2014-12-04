@@ -21,4 +21,5 @@
    inflect.irregular 'situacao', 'situacoes'
    inflect.irregular 'pessoa_fisica', 'pessoas_fisicas'
    inflect.irregular 'pessoa_juridica', 'pessoas_juridicas'
+  
  end

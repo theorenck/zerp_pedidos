@@ -1,51 +1,41 @@
 <%= fields_for :pessoa_attributes, pessoa_fisica do |f| %>  
-  <div class="form-group">
-    <%= f.label :type, :class => 'control-label col-md-2' %>
     <%= f.hidden_field :id %>
-    <div class="col-md-10">
-      <%= f.select(:type, { "Pessoa Física" => "PessoaFisica", "Pessoa Jurídica" => "PessoaJuridica" }, {}, {class: "form-control"}) %> 
+  <div class="col-md-10">
+    <div class="form-group">
+      <%= f.label :type, :class => 'control-label' %>
+      <%= f.select(:type, { "Pessoa Física" => "PessoaFisica", "Pessoa Jurídica" => "PessoaJuridica" }, {}, {class: "form-control"}) %>
     </div>
   </div>
-  <div class="form-group">
-    <%= f.label :nome, :class => 'control-label col-md-2' %>
+
+    <div class="col-md-10">
+      <%= f.text_field :cpf_cnpj, :class => 'text_field form-control' %>
+    </div>
+
     <div class="col-md-10">
       <%= f.text_field :nome, :class => 'text_field form-control' %>
     </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :data_nascimento, :class => 'control-label col-md-2' %>
+
     <div class="col-md-10">
       <%= f.text_field :data_nascimento, :class => 'text_field form-control' %>
     </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :naturalidade, :class => 'control-label col-md-2' %>
+
     <div class="col-md-10">
       <%= f.text_field :naturalidade, :class => 'text_field form-control' %>
     </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :rg_emissao, :class => 'control-label col-md-2' %>
+
     <div class="col-md-10">
       <%= f.text_field :rg_emissao, :class => 'text_field form-control' %>
     </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :rg_numero, :class => 'control-label col-md-2' %>
+
     <div class="col-md-10">
       <%= f.text_field :rg_numero, :class => 'text_field form-control' %>
     </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :orgao, :class => 'control-label col-md-2' %>
+
     <div class="col-md-10">
       <%= f.text_field :orgao, :class => 'text_field form-control' %>
     </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :sexo, :class => 'control-label col-md-2' %>
+
     <div class="col-md-10">
       <%= f.text_field :sexo, :class => 'text_field form-control' %>
     </div>
-  </div>
 <% end %>
